@@ -6,13 +6,13 @@ If there is no common prefix, return an empty string " ".
 
 class Solution:
     def longestCommmonPrefix(self, strs: [str]) -> str:
-        answer = " "
+        answer = ""
         if not strs:
             return " "
         elif (len(strs) == 1):
             return strs[0]
         else:
-            strs.sort
+            strs.sort()
             for i in range(len(strs[0])):
                 if strs[0][i] == strs[-1][i]:
                     answer += strs[0][i]
@@ -20,5 +20,5 @@ class Solution:
                     break
         return answer
 
-test =Solution.longestCommmonPrefix(Solution, ["flower", "flow", "flight"])
+test =Solution.longestCommmonPrefix(Solution, ["aaa", "aa", "aaa"])
 print(test)
